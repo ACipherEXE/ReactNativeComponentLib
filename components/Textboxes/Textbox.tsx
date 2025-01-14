@@ -4,7 +4,7 @@ type TextboxProps = {
   placeholderText?: string;
   headerText?: string;
   fillTextbox?: string;
-  onUserInputChange: (userInputEvent: string) => void;
+  onUserInputChange?: (userInputEvent: string) => void;
 };
 /**
  * The textbox component
@@ -22,7 +22,7 @@ export default function Textbox({
   headerText = "",
   placeholderText = "",
   fillTextbox = "",
-  onUserInputChange,
+  onUserInputChange = () => {},
 }: TextboxProps) {
   const [userInput, setUserInput] = useState(fillTextbox);
   function handleInputChange(userInputEvent: string) {
