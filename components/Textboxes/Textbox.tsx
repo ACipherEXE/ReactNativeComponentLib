@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { View, Text, TextInput, StyleSheet } from "react-native";
 type TextboxProps = {
   placeholderText?: string;
@@ -12,10 +12,10 @@ type TextboxProps = {
  *
  * Note: If you like typeing you will love this. click-clack and tap that keyboard and be amazed!
  *
- * @param headerText - Add a header to the textbox
- * @param placeholderText - Put a placeholder on the textbox to guide the user
- * @param fillTextbox - Insert text that you want to fill in the textbox
- * @param onUserInputChange - A way to get input out of the component.
+ * @param headerText - (Optional) Add a header to the textbox
+ * @param placeholderText - (Optional)Put a placeholder on the textbox to guide the user
+ * @param fillTextbox - (Optional) Insert text that you want to fill in the textbox
+ * @param onUserInputChange - (Optional) A way to get input out of the component.
  * @returns The textbox component set up as desired
  */
 export default function Textbox({
@@ -29,6 +29,9 @@ export default function Textbox({
     setUserInput(userInputEvent);
     onUserInputChange(userInputEvent);
   }
+  useEffect(() => {
+    setUserInput(fillTextbox);
+  }, [fillTextbox]);
   return (
     <View style={styles.container}>
       {headerText && <Text style={styles.headerText}>{headerText}</Text>}

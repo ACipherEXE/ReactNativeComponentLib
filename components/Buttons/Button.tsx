@@ -13,7 +13,7 @@ type ButtonProps = {
  *
  * @param {Function} onButtonPress - Pass a function that you want to trigger when button is pressed
  * @param {string} buttonText - The text you want to put on the button
- * @param {string} buttonColor - Optional. Pass warning(red), approve(green), color via text (EX:"blue") or a hex color number.
+ * @param {string} buttonColor - (Optional) Pass warning(red), approve(green), color via text (EX:"blue") or a hex color number.
  * @returns {component} The button component set up as desired
  */
 export default function Button({
