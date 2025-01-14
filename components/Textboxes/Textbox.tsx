@@ -6,9 +6,21 @@ type TextboxProps = {
   fillTextbox?: string;
   onUserInputChange: (userInputEvent: string) => void;
 };
+/**
+ * The textbox component
+ * For user input, autofill and etc.
+ *
+ * Note: If you like typeing you will love this. click-clack and tap that keyboard and be amazed!
+ *
+ * @param headerText - Add a header to the textbox
+ * @param placeholderText - Put a placeholder on the textbox to guide the user
+ * @param fillTextbox - Insert text that you want to fill in the textbox
+ * @param onUserInputChange - A way to get input out of the component.
+ * @returns The textbox component set up as desired
+ */
 export default function Textbox({
-  placeholderText = "",
   headerText = "",
+  placeholderText = "",
   fillTextbox = "",
   onUserInputChange,
 }: TextboxProps) {
