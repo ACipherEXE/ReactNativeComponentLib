@@ -6,12 +6,15 @@ type ButtonProps = {
   buttonColor?: string;
 };
 /**
- * A button component that you can change color live.
+ * The button component
+ * For all the boop, click and etc. the user might need to trigger events you want when clicked
+ *
+ * Note: Do not use as a self destruct button. Do a physical large button for that like in the hit videogame among s-us.
  *
  * @param {Function} onButtonPress - Pass a function that you want to trigger when button is pressed
  * @param {string} buttonText - The text you want to put on the button
- * @param {string} buttonColor - Optional. Pass warning(red), approve(green), color via text (EX:"blue") or a hex color number.
- * @returns {component} A button
+ * @param {string} buttonColor - (Optional) Pass warning(red), approve(green), color via text (EX:"blue") or a hex color number.
+ * @returns {component} The button component set up as desired
  */
 export default function Button({
   onButtonPress,

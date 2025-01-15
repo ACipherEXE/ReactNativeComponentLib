@@ -6,6 +6,7 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { DefaultButton } from "@/components/Buttons/DefaultButton";
 import Button from "@/components/Buttons/Button";
+import Textbox from "@/components/Textboxes/Textbox";
 
 export default function HomeScreen() {
   return (
@@ -25,6 +26,12 @@ export default function HomeScreen() {
       <ThemedView style={styles.stepContainer}>
         <DefaultButton />
         <Button />
+        <Textbox
+          headerText="Sample"
+          placeholderText="Sample"
+          fillTextbox="Something"
+          onUserInputChange={(e) => console.log(e)}
+        />
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>
           Edit{" "}
