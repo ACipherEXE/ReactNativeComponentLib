@@ -7,6 +7,7 @@ import { ThemedView } from "@/components/ThemedView";
 import { DefaultButton } from "@/components/Buttons/DefaultButton";
 import Button from "@/components/Buttons/Button";
 import Textbox from "@/components/Textboxes/Textbox";
+import ImageBox from "@/components/ImageBox/IMageBox";
 
 export default function HomeScreen() {
   return (
@@ -32,6 +33,7 @@ export default function HomeScreen() {
           fillTextbox="Something"
           onUserInputChange={(e) => console.log(e)}
         />
+        <ImageBox />
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>
           Edit{" "}
