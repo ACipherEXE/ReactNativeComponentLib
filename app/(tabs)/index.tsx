@@ -7,6 +7,7 @@ import { ThemedView } from "@/components/ThemedView";
 import { DefaultButton } from "@/components/Buttons/DefaultButton";
 import Button from "@/components/Buttons/Button";
 import Textbox from "@/components/Textboxes/Textbox";
+import ImageBox from "@/components/ImageBox/ImageBox";
 
 export default function HomeScreen() {
   return (
@@ -31,6 +32,10 @@ export default function HomeScreen() {
           placeholderText="Sample"
           fillTextbox="Something"
           onUserInputChange={(e) => console.log(e)}
+        />
+        <ImageBox
+          onImagePress={() => console.log("Image has been pressed")}
+          imagePath={require("../../assets/images/coqui-example.jpg")}
         />
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>
