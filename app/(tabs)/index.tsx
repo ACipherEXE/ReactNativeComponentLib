@@ -33,7 +33,10 @@ export default function HomeScreen() {
           fillTextbox="Something"
           onUserInputChange={(e) => console.log(e)}
         />
-        <ImageBox />
+        <ImageBox
+          onImagePress={() => console.log("Image has been pressed")}
+          imagePath={require("../../assets/images/coqui-example.jpg")}
+        />
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>
           Edit{" "}
