@@ -7,7 +7,7 @@ import { ThemedView } from "@/components/ThemedView";
 import { DefaultButton } from "@/components/Buttons/DefaultButton";
 import Button from "@/components/Buttons/Button";
 import Textbox from "@/components/Textboxes/Textbox";
-import ImageBox from "@/components/ImageBox/IMageBox";
+import ImageBox from "@/components/ImageBox/ImageBox";
 
 export default function HomeScreen() {
   return (
