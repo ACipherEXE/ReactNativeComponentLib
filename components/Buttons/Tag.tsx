@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
 import { TouchableOpacity, Text, View, StyleSheet } from "react-native";
-type ButtonProps = {
+type TagProps = {
   onButtonPress?: () => void;
-  buttonText?: string;
+  TagText?: string;
   buttonColor?: string;
 };
 /**
@@ -16,29 +15,11 @@ type ButtonProps = {
  * @param {string} buttonColor - (Optional) Pass warning(red), approve(green), color via text (EX:"blue") or a hex color number.
  * @returns {component} The button component set up as desired
  */
-export default function Button({
-  onButtonPress,
-  buttonText = "Button",
-  buttonColor = "#3A5EAB",
-}: ButtonProps) {
-  const [currentButtonColor, setCurrentButtonColor] = useState(buttonColor);
-  useEffect(() => {
-    if (buttonColor === "warning") {
-      setCurrentButtonColor("#E92228");
-    } else if (buttonColor === "approve") {
-      setCurrentButtonColor("#E92228");
-    } else {
-      setCurrentButtonColor(buttonColor);
-    }
-  }, [buttonColor]);
-
+export default function Tag({ onButtonPress, TagText = "Tag" }: TagProps) {
   return (
     <View style={styles.container}>
-      <TouchableOpacity
-        style={[styles.button, { backgroundColor: currentButtonColor }]}
-        onPress={onButtonPress}
-      >
-        <Text style={styles.text}>{buttonText}</Text>
+      <TouchableOpacity style={[styles.button]} onPress={onButtonPress}>
+        <Text style={styles.text}>{TagText} X</Text>
       </TouchableOpacity>
     </View>
   );
@@ -54,6 +35,7 @@ const styles = StyleSheet.create({
     height: 30,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "#3A5EAB",
   },
   text: {
     color: "#FFFFFF",
