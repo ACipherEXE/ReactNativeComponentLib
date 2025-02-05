@@ -8,6 +8,7 @@ import { DefaultButton } from "@/components/Buttons/DefaultButton";
 import Button from "@/components/Buttons/Button";
 import Textbox from "@/components/Textboxes/Textbox";
 import ImageBox from "@/components/ImageBox/ImageBox";
+import ItemDescriptionCard from "@/components/ui/ItemDescriptionCard";
 
 export default function HomeScreen() {
   return (
@@ -33,6 +34,7 @@ export default function HomeScreen() {
           fillTextbox="Something"
           onUserInputChange={(e) => console.log(e)}
         />
+        <ItemDescriptionCard />
         <ImageBox
           onImagePress={() => console.log("Image has been pressed")}
           imagePath={require("../../assets/images/coqui-example.jpg")}
